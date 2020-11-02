@@ -8,8 +8,13 @@
     }
   ],
   "width": "container",
-  "mark": {"type": "bar", "tooltip": true},
+  "mark": "bar",
   "encoding": {
+    "tooltip": [
+      {"field": "Vendor", "type": "nominal"},
+      {"field": "Sold", "type": "quantitative"},
+      {"field": "Type", "type": "nominal"}
+    ],
     "y": {
       "field": "Album",
       "type": "ordinal",
