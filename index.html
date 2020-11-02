@@ -14,11 +14,68 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Google font -->
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap" rel="stylesheet">
+
+  <!-- custom style -->
+  <style>
+    * {
+      font-family: 'Source Sans Pro', sans-serif;
+    }
+
+    h1 {
+      font-weight: 900;
+    }
+
+    body {
+      background-image: linear-gradient(to right, #fccfa6, #ff5fa2);
+    }
+
+    .page {
+      width: 850px;
+      background-color: #CCC8C3;
+      margin: auto;
+      padding: 50px;
+      padding-top: 35px;
+    }
+
+    .vis-container {
+      width: 100%;
+    }
+
+    .description h2,
+    h1 {
+      margin-top: 0px;
+    }
+
+    .description-right {
+      padding-left: 20px;
+    }
+
+    .description-left {
+      padding-right: 20px;
+    }
+
+    .pure-g {
+      margin-bottom: 25px;
+    }
+
+    .small-font {
+      font-size: 14px;
+    }
+  </style>
+
 </head>
 
-<body style="background-image: linear-gradient(to right, #fccfa6 , #ff5fa2)">
+<body>
 
   <div class="page">
+    <!-- title -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <img src="images/title.png">
+      </div>
+    </div>
+
+    <!-- intro -->
     <div id="vis"></div>
   </div>
   <script type="text/javascript">
