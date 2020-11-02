@@ -1,9 +1,31 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "data": {"url": "album_preorders.csv"},
+  "transform": [
+    {"calculate": "if(datum.Vendor === 'Ktown4u', 0, 1)", "as": "Order"}
+  ],
   "mark": "bar",
   "encoding": {
-    "x": {"field": "Album", "type": "ordinal", "title": "Release"},
+    "x": {
+      "field": "Album",
+      "type": "ordinal",
+      "title": "Release",
+      "sort": [
+        "TWICEcoaster: LANE 1",
+        "TWICEcoaster: LANE 2",
+        "SIGNAL",
+        "twicetagram",
+        "Merry & Happy",
+        "What is Love?",
+        "Summer Nights",
+        "YES or YES",
+        "The Year of \"YES\"",
+        "FANCY YOU",
+        "Feel Special",
+        "MORE & MORE",
+        "Eyes wide open"
+      ]
+    },
     "y": {
       "field": "Sold",
       "aggregate": "sum",
@@ -17,7 +39,8 @@
         "domain": ["HOTTRACKS", "Synnara", "Gmarket", "Ktown4u"],
         "range": ["#fccfa6", "#ff5fa2", "#fccfa6", "#953536"]
       }
-    }
+    },
+    "order": {"field": "Order"}
   },
   "background": "#ECEEEB",
   "config": {}
