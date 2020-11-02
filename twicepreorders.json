@@ -6,7 +6,7 @@
       "mark": "bar",
       "encoding": {
         "x": {"field": "Type", "type": "nominal"},
-        "y": {"aggregate": "count", "type": "quantitative"}
+        "y": {"aggregate": "count", "type": "quantitative", "field": "Type"}
       }
     },
     {
