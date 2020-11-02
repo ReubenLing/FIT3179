@@ -4,7 +4,7 @@
     {
       "selection": {"pts": {"type": "multi"}},
       "mark": "circle",
-      "encoding": {"x": {"field": "Type"}}
+      "encoding": {"x": {"field": "Album"}}
     },
     {
       "data": {"url": "album_preorders.csv"},
