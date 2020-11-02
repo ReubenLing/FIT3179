@@ -3,11 +3,8 @@
   "vconcat": [
     {
       "selection": {"pts": {"type": "multi"}},
-      "mark": "bar",
-      "encoding": {
-        "x": {"field": "Album", "type": "nominal"},
-        "y": {"field": "Sold"}
-      }
+      "mark": "circle",
+      "encoding": {"x": {"field": "Type"}}
     },
     {
       "data": {"url": "album_preorders.csv"},
