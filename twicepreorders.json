@@ -1,0 +1,18 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "data": {"url": "album_preorders.csv"},
+  "mark": "bar",
+  "encoding": {
+    "x": {"field": "Album", "type": "ordinal", "title": "Release"},
+    "y": {"aggregate": "sum", "type": "quantitative"},
+    "color": {
+      "field": "Vendor",
+      "type": "nominal",
+      "scale": {
+        "domain": ["HOTTRACKS", "Synnara", "Gmarket", "Ktown4u"],
+        "range": ["#fccfa6", "#ff5fa2", "#fccfa6", "#953536"]
+      }
+    }
+  },
+  "config": {}
+}
