@@ -1,0 +1,56 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "data": {"url": "album_preorders.csv"},
+  "transform": [
+    {
+      "calculate": "if(datum.Vendor === 'Ktown4u', 0, if(datum.Vendor === 'Synnara', 1, 2))",
+      "as": "Order"
+    }
+  ],
+  "width": "container",
+  "mark": "bar",
+  "encoding": {
+    "tooltip": [
+      {"field": "Vendor", "type": "nominal"},
+      {"field": "Sold", "type": "quantitative"},
+      {"field": "Type", "type": "nominal"}
+    ],
+    "y": {
+      "field": "Album",
+      "type": "ordinal",
+      "title": "Release",
+      "sort": [
+        "TWICEcoaster: LANE 1",
+        "TWICEcoaster: LANE 2",
+        "SIGNAL",
+        "twicetagram",
+        "Merry & Happy",
+        "What is Love?",
+        "Summer Nights",
+        "YES or YES",
+        "The Year of \"YES\"",
+        "FANCY YOU",
+        "Feel Special",
+        "MORE & MORE",
+        "Eyes wide open"
+      ]
+    },
+    "x": {
+      "field": "Sold",
+      "aggregate": "sum",
+      "type": "quantitative",
+      "title": "Total Sales"
+    },
+    "color": {
+      "field": "Vendor",
+      "type": "nominal",
+      "scale": {
+        "domain": ["Synnara", "Gmarket", "Ktown4u"],
+        "range": ["#ff5fa2", "#fccfa6", "#953536"]
+      }
+    },
+    "order": {"field": "Order"}
+  },
+  "background": "#ECEEEB",
+  "config": {}
+}
