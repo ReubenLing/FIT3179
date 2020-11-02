@@ -136,12 +136,17 @@
           <h2>In the Shadow of MORE & MORE</h2>
           <p>TWICE's 9th Mini-Album "MORE & MORE" was a blowout financial success, with almost double the number of pre-orders
             as their first full album, Twicetagram, and more than double any other EP in their discography.</p>
-          <p></p>
         </div>
       </div>
       <div class="pure-g">
         <div class="pure-u-1-1">
           <h2>Global Markets and Expansion</h2>
+          <p>Another aspect to consider is that TWICE's popularity may already have peaked in the markets they </p>
+        </div>
+      </div>
+      <div class="pure-g">
+        <div class="pure-u-1-1">
+          <div id="vis3" class="vis-container"></div>
         </div>
       </div>
     </div>
@@ -151,10 +156,14 @@
     <script type="text/javascript">
       var specVis1 = "ggalbumsales.json";
       var specVis2 = "twicepreorders.json";
+      var specVis3 = "twicelights.json";
       vegaEmbed('#vis1', specVis1).then(function (result) {
         // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
       }).catch(console.error);
       vegaEmbed('#vis2', specVis2).then(function (result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+      }).catch(console.error);
+      vegaEmbed('#vis3', specVis3).then(function (result) {
         // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
       }).catch(console.error);
     </script>

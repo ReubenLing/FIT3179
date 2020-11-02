@@ -1,0 +1,51 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "width": 800,
+  "height": 600,
+  "projection": {"type": "equalEarth"},
+  "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/ReubenLing/FIT3179/main/twicelights.topojson",
+        "format": {"type": "topojson", "feature": "twicelights"}
+      },
+      "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/ReubenLing/FIT3179/main/twicelights.csv"
+      },
+      "encoding": {
+        "longitude": {"field": "Longitude", "type": "quantitative"},
+        "latitude": {"field": "Latitude", "type": "quantitative"},
+        "tooltip": [
+          {"field": "City"},
+          {"field": "Country"},
+          {
+            "aggregate": "count",
+            "field": "city",
+            "type": "quantitative",
+            "title": "Shows"
+          }
+        ]
+      },
+      "layer": [
+        {
+          "mark": {"type": "point", "tooltip": {"content": "data"}},
+          "encoding": {
+            "size": {
+              "aggregate": "count",
+              "field": "city",
+              "type": "quantitative",
+              "title": "Number of Shows"
+            },
+            "color": {"value": "#953536"}
+          }
+        }
+      ]
+    }
+  ],
+  "view": {"stroke": null},
+  "background": "#ECEEEB",
+  "config": {}
+}
