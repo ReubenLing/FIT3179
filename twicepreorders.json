@@ -5,8 +5,8 @@
       "selection": {"pts": {"type": "multi"}},
       "mark": "bar",
       "encoding": {
-        "x": {"field": "Type", "type": "nominal"},
-        "y": {"aggregate": "count", "type": "quantitative", "field": "Type"}
+        "x": {"field": "Album", "type": "nominal"},
+        "y": {"field": "Sold"}
       }
     },
     {
