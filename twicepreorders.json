@@ -7,6 +7,7 @@
       "as": "Order"
     }
   ],
+  "width": "container",
   "mark": {"type": "bar", "tooltip": true},
   "encoding": {
     "y": {
