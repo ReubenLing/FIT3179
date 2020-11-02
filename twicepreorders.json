@@ -4,7 +4,12 @@
   "mark": "bar",
   "encoding": {
     "x": {"field": "Album", "type": "ordinal", "title": "Release"},
-    "y": {"aggregate": "sum", "type": "quantitative"},
+    "y": {
+      "field": "Sold",
+      "aggregate": "sum",
+      "type": "quantitative",
+      "title": "Total Sales"
+    },
     "color": {
       "field": "Vendor",
       "type": "nominal",
@@ -14,5 +19,6 @@
       }
     }
   },
+  "background": "#ECEEEB",
   "config": {}
 }
