@@ -6,6 +6,7 @@
         "url": "https://raw.githubusercontent.com/ReubenLing/FIT3179/main/preorder_days.csv"
       },
       "selection": {"pts": {"type": "multi"}},
+      "width": 250,
       "mark": "bar",
       "encoding": {
         "x": {
@@ -42,6 +43,7 @@
         "url": "https://raw.githubusercontent.com/ReubenLing/FIT3179/main/preorder_days.csv"
       },
       "mark": "circle",
+      "width": 200,
       "encoding": {
         "x": {"field": "Total Pre-Orders", "type": "quantitative"},
         "y": {"field": "Days After Previous Release", "type": "quantitative"},
