@@ -1,7 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "description": "Pie chart of the top 10 active girl groups' album sales as of September 2020.",
-  "title": "Active Girl Group Total Album Sales",
   "data": {
     "values": [
       {"Group": "TWICE", "Total Album Sales": 8444276},
@@ -47,9 +46,11 @@
           "#fccfa6",
           "#fccfa6"
         ]
-      }
+      },
+      "legend": null
     }
   },
   "view": {"stroke": null},
+  "background": "#ECEEEB",
   "config": {}
 }
