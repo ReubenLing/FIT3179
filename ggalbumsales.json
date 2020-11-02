@@ -1,0 +1,55 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "description": "Pie chart of the top 10 active girl groups' album sales as of September 2020.",
+  "title": "Active Girl Group Total Album Sales",
+  "data": {
+    "values": [
+      {"Group": "TWICE", "Total Album Sales": 8444276},
+      {"Group": "IZ*ONE", "Total Album Sales": 2459659},
+      {"Group": "Red Velvet", "Total Album Sales": 1550040},
+      {"Group": "BLACKPINK", "Total Album Sales": 1216649},
+      {"Group": "Apink", "Total Album Sales": 1039776},
+      {"Group": "GFRIEND", "Total Album Sales": 914733},
+      {"Group": "MAMAMOO", "Total Album Sales": 644464},
+      {"Group": "WSJN", "Total Album Sales": 563909},
+      {"Group": "ITZY", "Total Album Sales": 515294},
+      {"Group": "AOA", "Total Album Sales": 419659}
+    ]
+  },
+  "mark": {"type": "arc", "innerRadius": 75, "tooltip": true},
+  "encoding": {
+    "theta": {"field": "Total Album Sales", "type": "quantitative"},
+    "color": {
+      "field": "Group",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "TWICE",
+          "IZ*ONE",
+          "Red Velvet",
+          "BLACKPINK",
+          "Apink",
+          "GFRIEND",
+          "MAMAMOO",
+          "WSJN",
+          "ITZY",
+          "AOA"
+        ],
+        "range": [
+          "#953536",
+          "#ff5fa2",
+          "#ff5fa2",
+          "#fccfa6",
+          "#ff5fa2",
+          "#ff5fa2",
+          "#fccfa6",
+          "#ff5fa2",
+          "#fccfa6",
+          "#fccfa6"
+        ]
+      }
+    }
+  },
+  "view": {"stroke": null},
+  "config": {}
+}
