@@ -2,7 +2,10 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "data": {"url": "album_preorders.csv"},
   "transform": [
-    {"calculate": "if(datum.Vendor === 'Ktown4u', 0, 1)", "as": "Order"}
+    {
+      "calculate": "if(datum.Vendor === 'Ktown4u', 0, if(datum.Vendor === 'Synnara', 1, 2))",
+      "as": "Order"
+    }
   ],
   "mark": "bar",
   "encoding": {
@@ -37,7 +40,7 @@
       "type": "nominal",
       "scale": {
         "domain": ["HOTTRACKS", "Synnara", "Gmarket", "Ktown4u"],
-        "range": ["#fccfa6", "#ff5fa2", "#fccfa6", "#953536"]
+        "range": ["#ffffff", "#ff5fa2", "#fccfa6", "#953536"]
       }
     },
     "order": {"field": "Order"}
