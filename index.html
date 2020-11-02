@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html>
+
 <head>
   <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
   <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
@@ -8,15 +8,17 @@
   <!-- Import vega-embed -->
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
 </head>
-<body>
 
-<div id="vis"></div>
+<body style="background-image: linear-gradient(to right, #fccfa6 , #ff5fa2)">
 
-<script type="text/javascript">
-  var spec = "visualization.vl.json";
-  vegaEmbed('#vis', spec).then(function(result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
-</script>
+  <div id="vis"></div>
+
+  <script type="text/javascript">
+    var spec = "visualization.vl.json";
+    vegaEmbed('#vis', spec).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+  </script>
 </body>
+
 </html>
