@@ -7,9 +7,9 @@
       "as": "Order"
     }
   ],
-  "mark": "bar",
+  "mark": {"type": "bar", "tooltip": true},
   "encoding": {
-    "x": {
+    "y": {
       "field": "Album",
       "type": "ordinal",
       "title": "Release",
@@ -29,7 +29,7 @@
         "Eyes wide open"
       ]
     },
-    "y": {
+    "x": {
       "field": "Sold",
       "aggregate": "sum",
       "type": "quantitative",
@@ -39,8 +39,8 @@
       "field": "Vendor",
       "type": "nominal",
       "scale": {
-        "domain": ["HOTTRACKS", "Synnara", "Gmarket", "Ktown4u"],
-        "range": ["#ffffff", "#ff5fa2", "#fccfa6", "#953536"]
+        "domain": ["Synnara", "Gmarket", "Ktown4u"],
+        "range": ["#ff5fa2", "#fccfa6", "#953536"]
       }
     },
     "order": {"field": "Order"}
