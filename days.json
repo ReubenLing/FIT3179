@@ -1,0 +1,62 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "hconcat": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/ReubenLing/FIT3179/main/preorder_days.csv"
+      },
+      "selection": {"pts": {"type": "multi"}},
+      "mark": "bar",
+      "encoding": {
+        "x": {
+          "field": "Album",
+          "sort": [
+            "TWICEcoaster: LANE 1",
+            "TWICEcoaster: LANE 2",
+            "SIGNAL",
+            "twicetagram",
+            "Merry & Happy",
+            "What is Love?",
+            "Summer Nights",
+            "YES or YES",
+            "The Year of \"YES\"",
+            "FANCY YOU",
+            "Feel Special",
+            "MORE & MORE",
+            "Eyes wide open"
+          ]
+        },
+        "y": {"field": "Sales Per Day", "type": "quantitative"},
+        "color": {
+          "field": "Type",
+          "scale": {
+            "domain": ["EP", "Repackage", "Album"],
+            "range": ["#ff5fa2", "#fccfa6", "#953536"]
+          }
+        },
+        "tooltip": [{"field": "Type"}, {"field": "Sales Per Day"}]
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/ReubenLing/FIT3179/main/preorder_days.csv"
+      },
+      "mark": "circle",
+      "encoding": {
+        "x": {"field": "Total Pre-Orders", "type": "quantitative"},
+        "y": {"field": "Days After Previous Release", "type": "quantitative"},
+        "tooltip": [
+          {"field": "Album", "title": "Release Name"},
+          {"field": "Total Pre-Orders"},
+          {"field": "Days After Previous Release"},
+          {"field": "Type", "title": "Type of Album"}
+        ],
+        "color": {"field": "Type"},
+        "size": {"condition": {"selection": "pts", "value": 200}, "value": 50},
+        "opacity": {"condition": {"selection": "pts", "value": 1}, "value": 0.7}
+      }
+    }
+  ],
+  "background": "#ECEEEB",
+  "config": {}
+}
