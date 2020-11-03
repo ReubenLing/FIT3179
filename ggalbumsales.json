@@ -15,12 +15,17 @@
       {"Group": "AOA", "Total Album Sales": 419659}
     ]
   },
-  "mark": {"type": "arc", "innerRadius": 75, "tooltip": true},
+  "mark": {"type": "arc", "innerRadius": 75},
   "encoding": {
-    "theta": {"field": "Total Album Sales", "type": "quantitative"},
+    "theta": {
+      "field": "Total Album Sales",
+      "type": "quantitative",
+      "stack": true
+    },
     "color": {
       "field": "Group",
       "type": "nominal",
+      "legend": null,
       "scale": {
         "domain": [
           "TWICE",
@@ -49,6 +54,21 @@
       }
     }
   },
+  "layer": [
+    {
+      "mark": {"type": "arc", "innerRadius": 75, "tooltip": true},
+      "encoding": {
+        "tooltip": [
+          {"field": "Group"},
+          {"field": "Total Album Sales", "format": ","}
+        ]
+      }
+    },
+    {
+      "mark": {"type": "text", "radius": 122},
+      "encoding": {"text": {"field": "Group"}}
+    }
+  ],
   "view": {"stroke": null},
   "background": "#ECEEEB",
   "config": {}
