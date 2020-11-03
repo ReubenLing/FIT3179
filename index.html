@@ -195,17 +195,27 @@
           <div id="vis5" class="vis-container"></div>
         </div>
         <div class="pure-u-1-2">
-          <p>Finally, part of the concern over underperformance was due to disappointing
+          <p>Finally, pre-orders are not the only metric of a release's success: they were cited a lot as they were the only
+            numbers available for a time, but after about a week of release, more data is available around "Eyes wide open".
           </p>
+          <p>A better indicator of general public reception, at least to a release's title track, would be tracking music video
+            views. Similar to bulk buying, fans do attempt to artificially inflate views by "streaming" (letting the video
+            loop over and over)</p>
         </div>
       </div>
-      <hr>
       <div class="pure-g">
         <div class="pure-u-1-1">
           <hr>
           <h2>Global Markets and Expansion</h2>
-          <p>Another aspect to consider is that TWICE's popularity may already have peaked in the markets they primarily market
-            to. </p>
+          <p>Another aspect to consider is that TWICE's popularity may already be close to peaking in the regions they primarily
+            market towards. TWICE focuses the vast majority of their promotions in Korea and Japan (three out of nine of
+            the members are Japanese), with some concerts in South East Asia.</p>
+          <p>The group has enjoyed widespread popularity in Korea since their second title song, "CHEER UP" (released in April
+            2016), went viral. TWICE's Japanese releases began in October 2017 and are ongoing to today, with their next
+            single "BETTER" slated for 16 November 2020.</p>
+          <p>The below map shows the tour locations of "Twicelights", the group's first world tour. It can clearly be seen that
+            the majority of locations are in Asia (17 out of 29 in Japan alone), with four single concerts in various parts
+            of North America.</p>
         </div>
       </div>
       <div class="pure-g">
@@ -215,8 +225,23 @@
         </div>
       </div>
       <div class="pure-g">
+        <div class="pure-u-1-3">
+          <div id="vis6" class="vis-container"></div>
+        </div>
+        <div class="pure-u-2-3">
+          <p>A lot of fans' frustrations over "Eyes wide open" may have been influenced by the recordbreaking album "THE ALBUM"
+            by the internationally-renowned girl group BLACKPINK, which smashed TWICE's "MORE & MORE" pre-order record to
+            be the first Korean girl group in history to break 1 million pre-orders.</p>
+          <p>Among other factors, such as "THE ALBUM" being the group's first full album despite debuting in 2016, a significant
+            portion of these sales were attributed to the overseas market - no doubt influenced by BLACKPINK's collaboration
+            with famous Western artists like Cardi B and Selena Gomez.</p>
+          <p>With their limited promotions outside Korea and Japan, it might simply not be feasible to expect their sales to
+            reach such heights without a stronger international following.</p>
+        </div>
+      </div>
+      <div class="pure-g">
         <div class="pure-u-1-1">
-          <hr>
+          <p>But interestingly, this is where "Eyes wide open" may prove to be not a disappointment or "flop", but </p>
         </div>
       </div>
       <div class="pure-g">
@@ -241,6 +266,7 @@
       var specVis3 = "twicelights.json";
       var specVis4 = "days.json";
       var specVis5 = "mv_views.json";
+      var specVis6 = "blackpink.json";
       vegaEmbed('#vis1', specVis1).then(function (result) {
         // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
       }).catch(console.error);
@@ -254,6 +280,9 @@
         // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
       }).catch(console.error);
       vegaEmbed('#vis5', specVis5).then(function (result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+      }).catch(console.error);
+      vegaEmbed('#vis6', specVis6).then(function (result) {
         // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
       }).catch(console.error);
     </script>
