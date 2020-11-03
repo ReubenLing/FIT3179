@@ -5,7 +5,11 @@
       "data": {
         "url": "https://raw.githubusercontent.com/ReubenLing/FIT3179/main/preorder_days.csv"
       },
-      "selection": {"pts": {"type": "multi"}},
+      "selection": {
+        "pts": {
+          "type": "multi"
+        }
+      },
       "width": 250,
       "mark": "bar",
       "encoding": {
@@ -27,15 +31,34 @@
             "Eyes wide open"
           ]
         },
-        "y": {"field": "Sales Per Day", "type": "quantitative"},
+        "y": {
+          "field": "Sales Per Day",
+          "type": "quantitative",
+          "title": "Pre-Orders Per Day"
+        },
         "color": {
           "field": "Type",
           "scale": {
-            "domain": ["EP", "Repackage", "Album"],
-            "range": ["#ff5fa2", "#fccfa6", "#953536"]
+            "domain": [
+              "EP",
+              "Repackage",
+              "Album"
+            ],
+            "range": [
+              "#ff5fa2",
+              "#fccfa6",
+              "#953536"
+            ]
           }
         },
-        "tooltip": [{"field": "Type"}, {"field": "Sales Per Day"}]
+        "tooltip": [
+          {
+            "field": "Type"
+          },
+          {
+            "field": "Pre-Orders Per Day"
+          }
+        ]
       }
     },
     {
@@ -45,17 +68,47 @@
       "mark": "circle",
       "width": 200,
       "encoding": {
-        "x": {"field": "Total Pre-Orders", "type": "quantitative"},
-        "y": {"field": "Days After Previous Release", "type": "quantitative"},
+        "y": {
+          "field": "Total Pre-Orders",
+          "type": "quantitative"
+        },
+        "x": {
+          "field": "Days After Previous Release",
+          "type": "quantitative"
+        },
         "tooltip": [
-          {"field": "Album", "title": "Release Name"},
-          {"field": "Total Pre-Orders"},
-          {"field": "Days After Previous Release"},
-          {"field": "Type", "title": "Type of Album"}
+          {
+            "field": "Album",
+            "title": "Release Name"
+          },
+          {
+            "field": "Total Pre-Orders"
+          },
+          {
+            "field": "Days After Previous Release"
+          },
+          {
+            "field": "Type",
+            "title": "Type of Album"
+          }
         ],
-        "color": {"field": "Type"},
-        "size": {"condition": {"selection": "pts", "value": 200}, "value": 50},
-        "opacity": {"condition": {"selection": "pts", "value": 1}, "value": 0.7}
+        "color": {
+          "field": "Type"
+        },
+        "size": {
+          "condition": {
+            "selection": "pts",
+            "value": 200
+          },
+          "value": 50
+        },
+        "opacity": {
+          "condition": {
+            "selection": "pts",
+            "value": 1
+          },
+          "value": 0.7
+        }
       }
     }
   ],
