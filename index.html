@@ -62,6 +62,11 @@
       font-size: 14px;
     }
 
+    @font-face {
+      font-family: twiceLogoFont;
+      src: url("font/ITC Avant Garde Gothic Bold.otf");
+    }
+
     /* hr {
       color: repeating-linear-gradient( 45deg,
       #fccfa6,
@@ -89,7 +94,7 @@
     <div class="pure-g">
       <div class="pure-u-2-3">
         <div class="description description-left">
-          <h2>Introduction</h2>
+          <h2 font-family: "twiceLogoFont">Introduction</h2>
           <p>On October 26th, South Korean girl group TWICE released their second full album, "Eyes wide open". While the album
             and its title track "I CAN'T STOP ME" received critical praise, many fans have been left disappointed by the
             song's financial performance.</p>
@@ -134,6 +139,7 @@
         <div class="pure-u-1-1">
           <p>The above visualisation clearly shows that the sales of "Eyes wide open" have been dwarfed by its predecessor,
             "MORE & MORE".</p>
+          <p>Many fans' disappointment comes as a result of </p>
           <hr>
           <!-- section 1: more & more -->
           <h2>In the Shadow of MORE & MORE</h2>
@@ -172,6 +178,7 @@
       var specVis2 = "twicepreorders.json";
       var specVis3 = "twicelights.json";
       var specVis4 = "days.json";
+      var specVis5 = "mv_views.json";
       vegaEmbed('#vis1', specVis1).then(function (result) {
         // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
       }).catch(console.error);
@@ -182,6 +189,9 @@
         // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
       }).catch(console.error);
       vegaEmbed('#vis4', specVis4).then(function (result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+      }).catch(console.error);
+      vegaEmbed('#vis5', specVis5).then(function (result) {
         // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
       }).catch(console.error);
     </script>

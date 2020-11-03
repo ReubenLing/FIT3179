@@ -1,0 +1,26 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/ReubenLing/FIT3179/main/mv_views.csv"
+  },
+  "mark": {"type": "line", "point": true},
+  "encoding": {
+    "x": {"field": "Day", "type": "quantitative"},
+    "y": {"field": "Total Views (millions)", "type": "quantitative"},
+    "color": {
+      "field": "M/V",
+      "scale": {
+        "domain": ["I CAN'T STOP ME", "MORE & MORE"],
+        "range": ["#953536", "#ff5fa2"]
+      }
+    },
+    "tooltip": [
+      {"field": "M/V"},
+      {"field": "Release"},
+      {"field": "Views by Day (millions)"},
+      {"field": "Total Views (millions)"}
+    ]
+  },
+  "background": "#ECEEEB",
+  "config": {}
+}
