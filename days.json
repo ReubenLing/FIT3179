@@ -61,7 +61,11 @@
         },
         "tooltip": [
           {"field": "Type"},
-          {"field": "Sales Per Day", "title": "Pre-Orders Per Day"}
+          {
+            "field": "Sales Per Day",
+            "title": "Pre-Orders Per Day",
+            "format": ".2f"
+          }
         ]
       }
     }
