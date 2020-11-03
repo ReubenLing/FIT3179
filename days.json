@@ -1,7 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "vconcat": [
-    ,
     {
       "data": {
         "url": "https://raw.githubusercontent.com/ReubenLing/FIT3179/main/preorder_days.csv"
