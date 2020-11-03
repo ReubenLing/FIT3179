@@ -1,6 +1,57 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "vconcat": [
+    ,
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/ReubenLing/FIT3179/main/preorder_days.csv"
+      },
+      "mark": "circle",
+      "width": 200,
+      "encoding": {
+        "y": {
+          "field": "Total Pre-Orders",
+          "type": "quantitative"
+        },
+        "x": {
+          "field": "Days After Previous Release",
+          "type": "quantitative"
+        },
+        "tooltip": [
+          {
+            "field": "Album",
+            "title": "Release Name"
+          },
+          {
+            "field": "Total Pre-Orders"
+          },
+          {
+            "field": "Days After Previous Release"
+          },
+          {
+            "field": "Type",
+            "title": "Type of Album"
+          }
+        ],
+        "color": {
+          "field": "Type"
+        },
+        "size": {
+          "condition": {
+            "selection": "pts",
+            "value": 200
+          },
+          "value": 50
+        },
+        "opacity": {
+          "condition": {
+            "selection": "pts",
+            "value": 1
+          },
+          "value": 0.7
+        }
+      }
+    },
     {
       "data": {
         "url": "https://raw.githubusercontent.com/ReubenLing/FIT3179/main/preorder_days.csv"
@@ -60,56 +111,6 @@
             "title": "Pre-Orders Per Day"
           }
         ]
-      }
-    },
-    {
-      "data": {
-        "url": "https://raw.githubusercontent.com/ReubenLing/FIT3179/main/preorder_days.csv"
-      },
-      "mark": "circle",
-      "width": 200,
-      "encoding": {
-        "y": {
-          "field": "Total Pre-Orders",
-          "type": "quantitative"
-        },
-        "x": {
-          "field": "Days After Previous Release",
-          "type": "quantitative"
-        },
-        "tooltip": [
-          {
-            "field": "Album",
-            "title": "Release Name"
-          },
-          {
-            "field": "Total Pre-Orders"
-          },
-          {
-            "field": "Days After Previous Release"
-          },
-          {
-            "field": "Type",
-            "title": "Type of Album"
-          }
-        ],
-        "color": {
-          "field": "Type"
-        },
-        "size": {
-          "condition": {
-            "selection": "pts",
-            "value": 200
-          },
-          "value": 50
-        },
-        "opacity": {
-          "condition": {
-            "selection": "pts",
-            "value": 1
-          },
-          "value": 0.7
-        }
       }
     }
   ],
