@@ -2,47 +2,23 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "data": {
     "values": [
-      {
-        "Source": "Korea",
-        "Pre-Orders": 871355
-      },
-      {
-        "Source": "International",
-        "Pre-Orders": 319300
-      }
+      {"Source": "Korea", "Pre-Orders": 871355},
+      {"Source": "International", "Pre-Orders": 319300}
     ]
   },
   "mark": "bar",
   "encoding": {
-    "x": {
-      "field": "Source"
-    },
-    "y": {
-      "field": "Pre-Orders",
-      "type": "quantitative"
-    },
+    "x": {"field": "Source"},
+    "y": {"field": "Pre-Orders", "type": "quantitative"},
     "tooltip": [
-      {
-        "field": "Source",
-        "title": "Origin of Sale"
-      },
-      {
-        "field": "Pre-Orders",
-        "title": "Number of Pre-Orders",
-        "format": ","
-      }
+      {"field": "Source", "title": "Origin of Sale"},
+      {"field": "Pre-Orders", "title": "Number of Pre-Orders", "format": ","}
     ],
     "color": {
       "field": "Source",
       "scale": {
-        "domain": [
-          "International",
-          "Korea"
-        ],
-        "range": [
-          "#953536",
-          "#fccfa6"
-        ]
+        "domain": ["International", "Korea"],
+        "range": ["#953536", "#fccfa6"]
       }
     }
   },
